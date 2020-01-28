@@ -38,25 +38,7 @@ int main() {
 
     scanf("%d",&option);
 
-    switch (option){
-        case 1:
-            map_data = map_read();
-            map_dim = (int)round(sqrt(strlen(map_data)));
-            cells = cell_data_read();
-            tmp = cells;
-            while (tmp != NULL)
-            {
-                printf("%s\t",tmp->name);
-                printf("%d\t",tmp->energy);
-                printf("%d\t",tmp->x);
-                printf("%d\n",tmp->y);
-                tmp = tmp->next;
-            }
-            //map = map_build(map_data , map_dim , cells);
-            //map_print(map , map_dim , cells);
-
-    }
-    FILE *cell;
+ /*   FILE *cell;
     cell = fopen("cell_data.bin","wb");
     char *s = 0 , f[8];
     struct map_block** o = 0;
@@ -76,7 +58,27 @@ int main() {
         fwrite(&(tmp->next) , sizeof(struct cell *) , 1 , cell);
         tmp = tmp->next;
     }
-    fclose(cell);/*
+    fclose(cell);
+*/
+    switch (option){
+        case 1:
+            map_data = map_read();
+            map_dim = (int)round(sqrt(strlen(map_data)));
+            cells = cell_data_read();
+            tmp = cells;
+            while (tmp != NULL)
+            {
+                printf("%s\t",tmp->name);
+                printf("%d\t",tmp->energy);
+                printf("%d\t",tmp->x);
+                printf("%d\n",tmp->y);
+                tmp = tmp->next;
+            }
+            //map = map_build(map_data , map_dim , cells);
+            //map_print(map , map_dim , cells);
+
+    }
+    /*
     tmp = cell_data_read();
     while (tmp != NULL)
     {
