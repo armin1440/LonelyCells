@@ -77,6 +77,12 @@
 		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/LonelyCells.c">
 			<Option target="LonelyCells"/>
 		</Unit>
+		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_data_read.c">
+			<Option target="LonelyCells"/>
+		</Unit>
+		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_data_read.h">
+			<Option target="LonelyCells"/>
+		</Unit>
 		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/map_build.c">
 			<Option target="LonelyCells"/>
 		</Unit>

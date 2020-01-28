@@ -1,1 +1,1 @@
-char * map_read(char *);
+char * map_read();

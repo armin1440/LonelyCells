@@ -1,1 +1,1 @@
-struct map_block** map_build(char*  , int );
+struct map_block** map_build(char*  , int , struct cell* );

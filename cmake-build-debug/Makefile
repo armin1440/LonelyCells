@@ -149,6 +149,33 @@ LonelyCells.c.s:
 	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/LonelyCells.c.s
 .PHONY : LonelyCells.c.s
 
+cell_data_read.obj: cell_data_read.c.obj
+
+.PHONY : cell_data_read.obj
+
+# target to build an object file
+cell_data_read.c.obj:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_data_read.c.obj
+.PHONY : cell_data_read.c.obj
+
+cell_data_read.i: cell_data_read.c.i
+
+.PHONY : cell_data_read.i
+
+# target to preprocess a source file
+cell_data_read.c.i:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_data_read.c.i
+.PHONY : cell_data_read.c.i
+
+cell_data_read.s: cell_data_read.c.s
+
+.PHONY : cell_data_read.s
+
+# target to generate assembly for a file
+cell_data_read.c.s:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_data_read.c.s
+.PHONY : cell_data_read.c.s
+
 map_build.obj: map_build.c.obj
 
 .PHONY : map_build.obj
@@ -269,6 +296,9 @@ help:
 	@echo ... LonelyCells.obj
 	@echo ... LonelyCells.i
 	@echo ... LonelyCells.s
+	@echo ... cell_data_read.obj
+	@echo ... cell_data_read.i
+	@echo ... cell_data_read.s
 	@echo ... map_build.obj
 	@echo ... map_build.i
 	@echo ... map_build.s
