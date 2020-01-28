@@ -1,0 +1,3 @@
+C:/Users/novin/Documents/Github/LonelyCells/cmake-build-debug/CMakeFiles/LonelyCells.dir
+C:/Users/novin/Documents/Github/LonelyCells/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/novin/Documents/Github/LonelyCells/cmake-build-debug/CMakeFiles/rebuild_cache.dir

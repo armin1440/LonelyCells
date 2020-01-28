@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/novin/Documents/Github/LonelyCells/LonelyCells.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+math.h
+-
+map_read.h
+C:/Users/novin/Documents/Github/LonelyCells/map_read.h
+map_build.h
+C:/Users/novin/Documents/Github/LonelyCells/map_build.h
+
+C:/Users/novin/Documents/Github/LonelyCells/map_build.h
+
+C:/Users/novin/Documents/Github/LonelyCells/map_read.h
+
