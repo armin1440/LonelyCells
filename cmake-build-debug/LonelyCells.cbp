@@ -77,10 +77,22 @@
 		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/LonelyCells.c">
 			<Option target="LonelyCells"/>
 		</Unit>
+		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_creat_list.c">
+			<Option target="LonelyCells"/>
+		</Unit>
+		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_creat_list.h">
+			<Option target="LonelyCells"/>
+		</Unit>
 		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_data_read.c">
 			<Option target="LonelyCells"/>
 		</Unit>
 		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_data_read.h">
+			<Option target="LonelyCells"/>
+		</Unit>
+		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_rand_name.c">
+			<Option target="LonelyCells"/>
+		</Unit>
+		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_rand_name.h">
 			<Option target="LonelyCells"/>
 		</Unit>
 		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/map_build.c">

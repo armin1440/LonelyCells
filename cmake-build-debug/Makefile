@@ -149,6 +149,33 @@ LonelyCells.c.s:
 	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/LonelyCells.c.s
 .PHONY : LonelyCells.c.s
 
+cell_creat_list.obj: cell_creat_list.c.obj
+
+.PHONY : cell_creat_list.obj
+
+# target to build an object file
+cell_creat_list.c.obj:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_creat_list.c.obj
+.PHONY : cell_creat_list.c.obj
+
+cell_creat_list.i: cell_creat_list.c.i
+
+.PHONY : cell_creat_list.i
+
+# target to preprocess a source file
+cell_creat_list.c.i:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_creat_list.c.i
+.PHONY : cell_creat_list.c.i
+
+cell_creat_list.s: cell_creat_list.c.s
+
+.PHONY : cell_creat_list.s
+
+# target to generate assembly for a file
+cell_creat_list.c.s:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_creat_list.c.s
+.PHONY : cell_creat_list.c.s
+
 cell_data_read.obj: cell_data_read.c.obj
 
 .PHONY : cell_data_read.obj
@@ -175,6 +202,33 @@ cell_data_read.s: cell_data_read.c.s
 cell_data_read.c.s:
 	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_data_read.c.s
 .PHONY : cell_data_read.c.s
+
+cell_rand_name.obj: cell_rand_name.c.obj
+
+.PHONY : cell_rand_name.obj
+
+# target to build an object file
+cell_rand_name.c.obj:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_rand_name.c.obj
+.PHONY : cell_rand_name.c.obj
+
+cell_rand_name.i: cell_rand_name.c.i
+
+.PHONY : cell_rand_name.i
+
+# target to preprocess a source file
+cell_rand_name.c.i:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_rand_name.c.i
+.PHONY : cell_rand_name.c.i
+
+cell_rand_name.s: cell_rand_name.c.s
+
+.PHONY : cell_rand_name.s
+
+# target to generate assembly for a file
+cell_rand_name.c.s:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_rand_name.c.s
+.PHONY : cell_rand_name.c.s
 
 map_build.obj: map_build.c.obj
 
@@ -296,9 +350,15 @@ help:
 	@echo ... LonelyCells.obj
 	@echo ... LonelyCells.i
 	@echo ... LonelyCells.s
+	@echo ... cell_creat_list.obj
+	@echo ... cell_creat_list.i
+	@echo ... cell_creat_list.s
 	@echo ... cell_data_read.obj
 	@echo ... cell_data_read.i
 	@echo ... cell_data_read.s
+	@echo ... cell_rand_name.obj
+	@echo ... cell_rand_name.i
+	@echo ... cell_rand_name.s
 	@echo ... map_build.obj
 	@echo ... map_build.i
 	@echo ... map_build.s

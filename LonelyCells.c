@@ -7,6 +7,8 @@
 #include "map_build.h"
 #include "map_print.h"
 #include "cell_data_read.h"
+#include "cell_rand_name.h"
+#include "cell_creat_list.h"
 
 enum blocks{
     ENERGY = 1,
@@ -29,8 +31,8 @@ struct map_block{
 };
 
 int main() {
-    int option , map_dim;
-    char *map_data;
+    int option , option2 , map_dim , cell_num;
+    char *map_data , cell_names[100][8];
     struct cell* cells = 0 , *tmp = 0;
     struct map_block **map;
 
@@ -38,28 +40,6 @@ int main() {
 
     scanf("%d",&option);
 
- /*   FILE *cell;
-    cell = fopen("cell_data.bin","wb");
-    char *s = 0 , f[8];
-    struct map_block** o = 0;
-    s = map_read("map.bin");
-    struct cell a , b , c ,*pa  ;
-    int w = 3;
-    strcpy(a.name ,"arminaa"); strcpy(b.name,"Aryabbb") ; strcpy(c.name,"goobsee"); a.energy=41 ;
-    b.energy= 13; c.energy=12;
-    a.x = 1; a.y = 0; a.next = &b; b.x= 0 ; b.y = 1; b.next=&c; c.x = 1 ; c.y = 1; c.next = NULL;
-    tmp = &a;
-    fwrite(&w , sizeof(int) , 1 , cell);
-    while(tmp != NULL){
-        fwrite(tmp->name , sizeof(char) , 8 , cell);
-        fwrite(&(tmp->energy) , sizeof(int) , 1 , cell);
-        fwrite(&(tmp->x) , sizeof(int) , 1 , cell);
-        fwrite(&(tmp->y) , sizeof(int) , 1 , cell);
-        fwrite(&(tmp->next) , sizeof(struct cell *) , 1 , cell);
-        tmp = tmp->next;
-    }
-    fclose(cell);
-*/
     switch (option){
         case 1:
             map_data = map_read();
@@ -74,10 +54,37 @@ int main() {
                 printf("%d\n",tmp->y);
                 tmp = tmp->next;
             }
-            //map = map_build(map_data , map_dim , cells);
-            //map_print(map , map_dim , cells);
-
+            map = map_build(map_data , map_dim , cells);
+            map_print(map , map_dim , cells);
+            break;
+        case 2:
+            printf("Enter the number of cells\n");
+            scanf("%d",&cell_num);
+            map_dim = (int)round(sqrt(strlen(map_read())));
+            for (int j = 0; j < cell_num ; ++j) {
+                getchar();
+                printf("Enter the %dth cell's name, It must be exactly 7 chararcters!\n",j+1);
+                scanf(" %s",cell_names[j]);
+                cell_names[j][7] = '\0';
+            }
+            cells = cell_creat_list(cell_num , 4 ,cell_names);
+            map = map_build(map_read() , 4 , cells);
+            map_print(map , 4 , cells);
+            printf("Choose one of your cells\n");
+            tmp = cells;
+            for (int i = 0; i < cell_num ; ++i) {
+                printf("[%d]%s  ( %d , %d )\n",i+1,tmp->name , tmp->x , tmp->y);
+                tmp = tmp->next;
+            }
+            scanf("%d",&option);
+            tmp = cells;
+            for (int k = 0; k < option - 1 ; ++k)
+                tmp = tmp->next;
+            printf("What do you want to do?\n");
+            printf("[1]Move\n[2]Split a cell\n[3]Boost energy\n[4]save\n[5]Exit\n");
+            
     }
+
     /*
     tmp = cell_data_read();
     while (tmp != NULL)
