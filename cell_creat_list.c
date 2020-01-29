@@ -10,8 +10,13 @@ struct cell{
     int y;
     struct cell* next;
 };
+struct map_block{
+    int type;
+    int supply;
+    int is_filled;
+};
 
-struct cell * cell_creat_list(int cell_num , int map_dim , char names[][8] )
+struct cell * cell_creat_list(int cell_num , int map_dim , char names[][8] , char* map_data )
 {
     struct cell *temp = NULL , *previous = NULL , *list = NULL;
     int *a , *b, flag = 0 , counter1 = 1 , rnd1 , rnd2;
@@ -19,20 +24,24 @@ struct cell * cell_creat_list(int cell_num , int map_dim , char names[][8] )
     a = (int*)malloc(cell_num* sizeof(int));
     b = (int*)malloc(cell_num* sizeof(int));
     srand(time(NULL));
-    a[0] = rand()%map_dim;
-    b[0] = rand()%map_dim;
+    while(1){
+        a[0] = rand()%map_dim;
+        b[0] = rand()%map_dim;
+        if ( *(map_data+(b[0])*map_dim+a[0]) != '3')
+            break;
+    }
+
     while ( counter1 < cell_num ) {
         rnd1 = rand()%map_dim;
         rnd2 = rand()%map_dim;
         flag = 0;
         for (int j = 0; j < counter1 ; ++j) {
-            if ( rnd1 == a[j] && rnd2 == b[j] ){
+            if ( (rnd1 == a[j] && rnd2 == b[j]) || *(map_data+(rnd2)*map_dim+rnd1) == '3' ){
                 flag = 1;
                 break;
             }
         }
-        if ( flag == 0)
-        {
+        if ( flag == 0 ){
             a[counter1] = rnd1;
             b[counter1] = rnd2;
             counter1++;

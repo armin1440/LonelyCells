@@ -9,6 +9,7 @@ struct cell{
 };
 struct map_block{
     int type;
+    int supply;
     int is_filled;
 };
 

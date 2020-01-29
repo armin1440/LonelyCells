@@ -203,6 +203,33 @@ cell_data_read.c.s:
 	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_data_read.c.s
 .PHONY : cell_data_read.c.s
 
+cell_move.obj: cell_move.c.obj
+
+.PHONY : cell_move.obj
+
+# target to build an object file
+cell_move.c.obj:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_move.c.obj
+.PHONY : cell_move.c.obj
+
+cell_move.i: cell_move.c.i
+
+.PHONY : cell_move.i
+
+# target to preprocess a source file
+cell_move.c.i:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_move.c.i
+.PHONY : cell_move.c.i
+
+cell_move.s: cell_move.c.s
+
+.PHONY : cell_move.s
+
+# target to generate assembly for a file
+cell_move.c.s:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_move.c.s
+.PHONY : cell_move.c.s
+
 cell_rand_name.obj: cell_rand_name.c.obj
 
 .PHONY : cell_rand_name.obj
@@ -356,6 +383,9 @@ help:
 	@echo ... cell_data_read.obj
 	@echo ... cell_data_read.i
 	@echo ... cell_data_read.s
+	@echo ... cell_move.obj
+	@echo ... cell_move.i
+	@echo ... cell_move.s
 	@echo ... cell_rand_name.obj
 	@echo ... cell_rand_name.i
 	@echo ... cell_rand_name.s

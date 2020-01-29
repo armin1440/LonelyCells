@@ -10,7 +10,14 @@ struct cell{
 };
 struct map_block{
     int type;
+    int supply;
     int is_filled;
+};
+enum blocks{
+    ENERGY = 1,
+    MITOSIS,
+    FORBIDDEN,
+    NORMAL
 };
 
 struct map_block** map_build(char* map_data , int map_dim , struct cell * cells ){
@@ -26,8 +33,15 @@ struct map_block** map_build(char* map_data , int map_dim , struct cell * cells 
     for (int i = 0; i < map_dim ; ++i) {
         for (int j = 0; j < map_dim ; ++j) {
             temp = cells;
-            block[i][j].type = *(map_data+i*map_dim+j)-'0';
-            block[i][j].is_filled = 0;
+            block[i][j].type = *(map_data+j*map_dim+i)-'0';
+            if ( block[i][j].type == ENERGY)
+                block[i][j].supply = 100;
+            else
+                block[i][j].supply = 0;
+            if ( block[i][j].type == FORBIDDEN )
+                block[i][j].is_filled = 3;
+            else
+                block[i][j].is_filled = 0;
             while( temp != NULL )
             {
                 if ( temp->x == i && temp->y == j )

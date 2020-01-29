@@ -89,6 +89,12 @@
 		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_data_read.h">
 			<Option target="LonelyCells"/>
 		</Unit>
+		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_move.c">
+			<Option target="LonelyCells"/>
+		</Unit>
+		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_move.h">
+			<Option target="LonelyCells"/>
+		</Unit>
 		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_rand_name.c">
 			<Option target="LonelyCells"/>
 		</Unit>

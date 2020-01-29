@@ -1,0 +1,1 @@
+void cell_move(struct cell * , int , struct map_block ** , int );

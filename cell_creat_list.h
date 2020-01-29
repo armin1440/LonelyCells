@@ -1,1 +1,1 @@
-struct cell * cell_creat_list(int , int , char [][8] );
+struct cell * cell_creat_list(int , int , char [][8] , char*);
