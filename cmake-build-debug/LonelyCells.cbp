@@ -143,6 +143,12 @@
 		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/map_read.h">
 			<Option target="LonelyCells"/>
 		</Unit>
+		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/map_read_supply.c">
+			<Option target="LonelyCells"/>
+		</Unit>
+		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/map_read_supply.h">
+			<Option target="LonelyCells"/>
+		</Unit>
 		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/map_save.c">
 			<Option target="LonelyCells"/>
 		</Unit>

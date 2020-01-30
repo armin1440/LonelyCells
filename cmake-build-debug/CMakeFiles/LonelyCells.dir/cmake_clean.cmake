@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/LonelyCells.dir/map_build.c.obj"
   "CMakeFiles/LonelyCells.dir/map_print.c.obj"
   "CMakeFiles/LonelyCells.dir/map_read.c.obj"
+  "CMakeFiles/LonelyCells.dir/map_read_supply.c.obj"
   "CMakeFiles/LonelyCells.dir/map_save.c.obj"
   "LonelyCells.exe"
   "LonelyCells.exe.manifest"

@@ -6,6 +6,8 @@
 #include "map_read.h"
 #include "map_build.h"
 #include "map_print.h"
+#include "map_save.h"
+#include "map_read_supply.h"
 #include "cell_data_read.h"
 #include "cell_rand_name.h"
 #include "cell_creat_list.h"
@@ -13,6 +15,7 @@
 #include "cell_split_spawn.h"
 #include "cell_split.h"
 #include "cell_increase_energy.h"
+#include "cell_save.h"
 
 enum blocks{
     ENERGY = 1,
@@ -36,23 +39,47 @@ struct map_block{
 };
 
 int main() {
-    int option , option2 , map_dim , cell_num , move_num , cell_selected;
+    int option , option2 , map_dim , cell_num , move_num , cell_selected , *map_supply;
     char *map_data , cell_names[100][8] ,cell_split_name[2][8];
     struct cell* cells = 0 , *tmp = 0 , *cell = 0;
     struct map_block **map;
 
-    printf("[1]load\n[2]New single player game\n[3]New multiplayer game\n[4]Exit\n");
+    main_menu : printf("[1]load\n[2]New single player game\n[3]New multiplayer game\n[4]Exit\n");
 
     scanf("%d",&option);
 
     switch (option){
+        case 4:
+            return 52;
         //Load
         case 1:
             map_data = map_read();
             map_dim = (int)round(sqrt(strlen(map_data)));
             cells = cell_data_read();
+            cell = cells;
+            /*while(cell)
+            {
+                printf("%s\n",cell->name);
+                printf("%d\n",cell->x);
+                printf("%d\n",cell->y);
+                printf("%d\n",cell->energy);
+                cell = cell->next;
+            }*/
+            map_supply = map_read_supply(map_dim);
             map = map_build(map_data , map_dim , cells);
+            for (int k = 0; k < map_dim ; ++k) {
+                for (int i = 0; i < map_dim ; ++i) {
+                    map[k][i].supply = *(map_supply+k*map_dim+i);
+                }
+            }
             map_print(map , map_dim , cells);
+            cell_num = 0;
+            while(cell)
+            {
+                cell_num++;
+                cell = cell->next;
+            }
+            goto gameplay;
             break;
 
             //New single player
@@ -62,19 +89,18 @@ int main() {
 
             for (int j = 0; j < cell_num ; ++j) {
                 getchar();
-                printf("Enter the %dth cell's name, It must be exactly 7 chararcters!\n",j+1);
+                printf("Enter the %dth cell's name that is less than 8 characters\n",j+1);
                 scanf(" %s",cell_names[j]);
                 cell_names[j][7] = '\0';
             }
 
-            //map_dim = (int)round(sqrt(strlen(map_read())));
-            map_dim = 2;
+            map_dim = (int)round(sqrt(strlen(map_read())));
             map_data = map_read();
             cells = cell_creat_list(cell_num , map_dim ,cell_names , map_data);
             map = map_build(map_read() , map_dim , cells);
             map_print(map , map_dim , cells);
 
-            while(1) {
+        gameplay : while(1) {
                 printf("Choose one of your cells\n");
                 cell = cells;
                 for (int i = 0; i < cell_num; ++i) {
@@ -88,7 +114,7 @@ int main() {
                 scanf("%d", &option);
                 switch (option) {
                     case 5:
-                        return 14400;
+                        goto main_menu;
                     case 1:
                         printf("[1]North\n[2]South\n[3]Northeast\n[4]Northwest\n[5]Southeast\n[6]Southwest\n");
                         scanf("%d", &move_num);
@@ -123,7 +149,9 @@ int main() {
                         cell_increase_energy(map , cells , map_dim , cell_selected);
                         break;
                     case 4:
-
+                        cell_save(cells);
+                        map_save(map , map_dim);
+                        break;
 
                 }
             }

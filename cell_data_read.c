@@ -11,22 +11,38 @@ struct cell{
 
 struct cell* cell_data_read (void){
     FILE *cell_file;
-    struct cell *temp = NULL , *list = NULL;
+    struct cell *temp = NULL , *previous = NULL , *list = NULL;
     int cell_num;
 
-    cell_file = fopen("cell_data.bin","rb");
-    fread(&cell_num , sizeof(int), 1 ,cell_file);
+    cell_file = fopen("cell_data.txt","r");
+
+    fscanf(cell_file , "%d" , &cell_num );
+
     for (int i = 0; i < cell_num ; ++i) {
         temp =(struct cell*)malloc(sizeof(struct cell));
-        fread(temp->name , sizeof(char) , 8 , cell_file);
+
+        if ( previous != NULL)
+            previous->next = temp;
+
+        fgetc(cell_file);
+        fscanf(cell_file , "%s" , temp->name);
         temp->name[7] = '\0';
-        fread(&(temp->energy) , sizeof(int) , 1 , cell_file);
-        fread(&(temp->x) , sizeof(int) , 1 ,cell_file);
-        fread(&(temp->y) , sizeof(int) , 1 , cell_file);
-        fread(&(temp->next) , sizeof(struct cell*) , 1 , cell_file);
+
+        fgetc(cell_file);
+        fscanf(cell_file , "%d" , &temp->x);
+
+        fgetc(cell_file);
+        fscanf(cell_file , "%d" , &temp->y);
+
+        fgetc(cell_file);
+        fscanf(cell_file , "%d" , &temp->energy);
+
+        previous = temp;
+
         if ( i == 0 )
             list = temp;
     }
+    previous->next = NULL;
     fclose(cell_file);
     return list;
 }

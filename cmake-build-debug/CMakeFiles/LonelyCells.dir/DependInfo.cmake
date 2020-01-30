@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/novin/Documents/Github/LonelyCells/map_build.c" "C:/Users/novin/Documents/Github/LonelyCells/cmake-build-debug/CMakeFiles/LonelyCells.dir/map_build.c.obj"
   "C:/Users/novin/Documents/Github/LonelyCells/map_print.c" "C:/Users/novin/Documents/Github/LonelyCells/cmake-build-debug/CMakeFiles/LonelyCells.dir/map_print.c.obj"
   "C:/Users/novin/Documents/Github/LonelyCells/map_read.c" "C:/Users/novin/Documents/Github/LonelyCells/cmake-build-debug/CMakeFiles/LonelyCells.dir/map_read.c.obj"
+  "C:/Users/novin/Documents/Github/LonelyCells/map_read_supply.c" "C:/Users/novin/Documents/Github/LonelyCells/cmake-build-debug/CMakeFiles/LonelyCells.dir/map_read_supply.c.obj"
   "C:/Users/novin/Documents/Github/LonelyCells/map_save.c" "C:/Users/novin/Documents/Github/LonelyCells/cmake-build-debug/CMakeFiles/LonelyCells.dir/map_save.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

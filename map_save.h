@@ -1,0 +1,1 @@
+void map_save(struct map_block ** map , int map_dim);

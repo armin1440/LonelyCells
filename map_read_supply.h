@@ -1,0 +1,1 @@
+int * map_read_supply(int );

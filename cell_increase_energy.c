@@ -24,25 +24,30 @@ void cell_increase_energy ( struct map_block ** map , struct cell * cells , int 
 
     if( map[cell->x][cell->y].type != 1){
         printf("You can not boost energy in this block\n");
-    } else {
+    }else if( map[cell->x][cell->y].supply == 0 ){
+        printf("This block is out of energy\n");
+    }
+    else {
         if (cell->energy <= 85) {
             if (map[cell->x][cell->y].supply >= 15) {
                 cell->energy += 15;
                 map[cell->x][cell->y].supply -= 15;
+                printf("energy successfully boosted, your new energy = %d , remained energy of this block = %d\n",cell->energy,map[cell->x][cell->y].supply);
             } else {
                 cell->energy += map[cell->x][cell->y].supply;
                 map[cell->x][cell->y].supply = 0;
+                printf("energy successfully boosted, your new energy = %d , remained energy of this block = %d\n",cell->energy,map[cell->x][cell->y].supply);
             }
-            printf("energy successfully boosted, your new energy = %d , remained energy of this block = %d\n",cell->energy,map[cell->x][cell->y].supply);
         } else{
             if( map[cell->x][cell->y].supply >= (100 - cell->energy) ){
-                cell->energy = 100;
                 map[cell->x][cell->y].supply -= 100 - cell->energy;
+                cell->energy = 100;
+                printf("energy successfully boosted, your new energy = %d , remained energy of this block = %d\n",cell->energy,map[cell->x][cell->y].supply);
             } else{
                 cell->energy += map[cell->x][cell->y].supply;
                 map[cell->x][cell->y].supply = 0;
+                printf("energy successfully boosted, your new energy = %d , remained energy of this block = %d\n",cell->energy,map[cell->x][cell->y].supply);
             }
-            printf("energy successfully boosted, your new energy = %d , remained energy of this block = %d\n",cell->energy,map[cell->x][cell->y].supply);
         }
     }
 }

@@ -446,6 +446,33 @@ map_read.c.s:
 	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/map_read.c.s
 .PHONY : map_read.c.s
 
+map_read_supply.obj: map_read_supply.c.obj
+
+.PHONY : map_read_supply.obj
+
+# target to build an object file
+map_read_supply.c.obj:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/map_read_supply.c.obj
+.PHONY : map_read_supply.c.obj
+
+map_read_supply.i: map_read_supply.c.i
+
+.PHONY : map_read_supply.i
+
+# target to preprocess a source file
+map_read_supply.c.i:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/map_read_supply.c.i
+.PHONY : map_read_supply.c.i
+
+map_read_supply.s: map_read_supply.c.s
+
+.PHONY : map_read_supply.s
+
+# target to generate assembly for a file
+map_read_supply.c.s:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/map_read_supply.c.s
+.PHONY : map_read_supply.c.s
+
 map_save.obj: map_save.c.obj
 
 .PHONY : map_save.obj
@@ -518,6 +545,9 @@ help:
 	@echo ... map_read.obj
 	@echo ... map_read.i
 	@echo ... map_read.s
+	@echo ... map_read_supply.obj
+	@echo ... map_read_supply.i
+	@echo ... map_read_supply.s
 	@echo ... map_save.obj
 	@echo ... map_save.i
 	@echo ... map_save.s
