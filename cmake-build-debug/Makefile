@@ -203,6 +203,33 @@ cell_data_read.c.s:
 	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_data_read.c.s
 .PHONY : cell_data_read.c.s
 
+cell_increase_energy.obj: cell_increase_energy.c.obj
+
+.PHONY : cell_increase_energy.obj
+
+# target to build an object file
+cell_increase_energy.c.obj:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_increase_energy.c.obj
+.PHONY : cell_increase_energy.c.obj
+
+cell_increase_energy.i: cell_increase_energy.c.i
+
+.PHONY : cell_increase_energy.i
+
+# target to preprocess a source file
+cell_increase_energy.c.i:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_increase_energy.c.i
+.PHONY : cell_increase_energy.c.i
+
+cell_increase_energy.s: cell_increase_energy.c.s
+
+.PHONY : cell_increase_energy.s
+
+# target to generate assembly for a file
+cell_increase_energy.c.s:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_increase_energy.c.s
+.PHONY : cell_increase_energy.c.s
+
 cell_move.obj: cell_move.c.obj
 
 .PHONY : cell_move.obj
@@ -256,6 +283,33 @@ cell_rand_name.s: cell_rand_name.c.s
 cell_rand_name.c.s:
 	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_rand_name.c.s
 .PHONY : cell_rand_name.c.s
+
+cell_save.obj: cell_save.c.obj
+
+.PHONY : cell_save.obj
+
+# target to build an object file
+cell_save.c.obj:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_save.c.obj
+.PHONY : cell_save.c.obj
+
+cell_save.i: cell_save.c.i
+
+.PHONY : cell_save.i
+
+# target to preprocess a source file
+cell_save.c.i:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_save.c.i
+.PHONY : cell_save.c.i
+
+cell_save.s: cell_save.c.s
+
+.PHONY : cell_save.s
+
+# target to generate assembly for a file
+cell_save.c.s:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_save.c.s
+.PHONY : cell_save.c.s
 
 cell_split.obj: cell_split.c.obj
 
@@ -437,12 +491,18 @@ help:
 	@echo ... cell_data_read.obj
 	@echo ... cell_data_read.i
 	@echo ... cell_data_read.s
+	@echo ... cell_increase_energy.obj
+	@echo ... cell_increase_energy.i
+	@echo ... cell_increase_energy.s
 	@echo ... cell_move.obj
 	@echo ... cell_move.i
 	@echo ... cell_move.s
 	@echo ... cell_rand_name.obj
 	@echo ... cell_rand_name.i
 	@echo ... cell_rand_name.s
+	@echo ... cell_save.obj
+	@echo ... cell_save.i
+	@echo ... cell_save.s
 	@echo ... cell_split.obj
 	@echo ... cell_split.i
 	@echo ... cell_split.s

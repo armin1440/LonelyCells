@@ -1,0 +1,1 @@
+void cell_increase_energy ( struct map_block ** , struct cell *, int , int );

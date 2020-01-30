@@ -12,6 +12,7 @@
 #include "cell_move.h"
 #include "cell_split_spawn.h"
 #include "cell_split.h"
+#include "cell_increase_energy.h"
 
 enum blocks{
     ENERGY = 1,
@@ -45,6 +46,7 @@ int main() {
     scanf("%d",&option);
 
     switch (option){
+        //Load
         case 1:
             map_data = map_read();
             map_dim = (int)round(sqrt(strlen(map_data)));
@@ -53,6 +55,7 @@ int main() {
             map_print(map , map_dim , cells);
             break;
 
+            //New single player
         case 2:
             printf("Enter the number of cells\n");
             scanf("%d",&cell_num);
@@ -87,21 +90,41 @@ int main() {
                     case 5:
                         return 14400;
                     case 1:
-                        printf("[1]North\n[2]South\n[3]Northeast\n[4]Northwest\n[5]Southeast\n[6]Southwest");
+                        printf("[1]North\n[2]South\n[3]Northeast\n[4]Northwest\n[5]Southeast\n[6]Southwest\n");
                         scanf("%d", &move_num);
                         cell_move(cells ,move_num , map , cell_selected );
                         map_print(map , map_dim , cells);
                         break;
                     case 2:
-                        for (int i = 0; i <2 ; ++i) {
-                            printf("Enter the %dth cell's name\n",i+1);
-                            getchar();
-                            scanf("%s",cell_split_name[i]);
-                            cell_split_name[i][7] = '\0';
+                        cell = cells;
+                        for (int j = 0; j < cell_selected - 1 ; ++j) {
+                            cell = cell->next;
                         }
-                        cells = cell_split(&cells , map , cell_split_name ,map_dim ,cell_selected);
-                        cell_num += 1;
-                        map_print(map , map_dim , cells);
+                        if ( map[cell->x][cell->y].type != MITOSIS )
+                        {
+                            printf("You can not split a cell in this block\n");
+                        }else {
+                            if (cell->energy < 80) {
+                                printf("Not enough energy\n");
+                            } else {
+                                for (int i = 0; i < 2; ++i) {
+                                    printf("Enter the %dth cell's name\n", i + 1);
+                                    getchar();
+                                    scanf("%s", cell_split_name[i]);
+                                    cell_split_name[i][7] = '\0';
+                                }
+                                cells = cell_split(&cells, map, cell_split_name, map_dim, cell_selected);
+                                cell_num += 1;
+                                map_print(map, map_dim, cells);
+                            }
+                        }
+                        break;
+                    case 3:
+                        cell_increase_energy(map , cells , map_dim , cell_selected);
+                        break;
+                    case 4:
+
+
                 }
             }
     }
