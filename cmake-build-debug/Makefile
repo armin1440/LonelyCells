@@ -257,6 +257,60 @@ cell_rand_name.c.s:
 	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_rand_name.c.s
 .PHONY : cell_rand_name.c.s
 
+cell_split.obj: cell_split.c.obj
+
+.PHONY : cell_split.obj
+
+# target to build an object file
+cell_split.c.obj:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_split.c.obj
+.PHONY : cell_split.c.obj
+
+cell_split.i: cell_split.c.i
+
+.PHONY : cell_split.i
+
+# target to preprocess a source file
+cell_split.c.i:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_split.c.i
+.PHONY : cell_split.c.i
+
+cell_split.s: cell_split.c.s
+
+.PHONY : cell_split.s
+
+# target to generate assembly for a file
+cell_split.c.s:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_split.c.s
+.PHONY : cell_split.c.s
+
+cell_split_spawn.obj: cell_split_spawn.c.obj
+
+.PHONY : cell_split_spawn.obj
+
+# target to build an object file
+cell_split_spawn.c.obj:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_split_spawn.c.obj
+.PHONY : cell_split_spawn.c.obj
+
+cell_split_spawn.i: cell_split_spawn.c.i
+
+.PHONY : cell_split_spawn.i
+
+# target to preprocess a source file
+cell_split_spawn.c.i:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_split_spawn.c.i
+.PHONY : cell_split_spawn.c.i
+
+cell_split_spawn.s: cell_split_spawn.c.s
+
+.PHONY : cell_split_spawn.s
+
+# target to generate assembly for a file
+cell_split_spawn.c.s:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_split_spawn.c.s
+.PHONY : cell_split_spawn.c.s
+
 map_build.obj: map_build.c.obj
 
 .PHONY : map_build.obj
@@ -389,6 +443,12 @@ help:
 	@echo ... cell_rand_name.obj
 	@echo ... cell_rand_name.i
 	@echo ... cell_rand_name.s
+	@echo ... cell_split.obj
+	@echo ... cell_split.i
+	@echo ... cell_split.s
+	@echo ... cell_split_spawn.obj
+	@echo ... cell_split_spawn.i
+	@echo ... cell_split_spawn.s
 	@echo ... map_build.obj
 	@echo ... map_build.i
 	@echo ... map_build.s

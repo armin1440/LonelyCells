@@ -29,6 +29,10 @@ cell_creat_list.h
 C:/Users/novin/Documents/Github/LonelyCells/cell_creat_list.h
 cell_move.h
 C:/Users/novin/Documents/Github/LonelyCells/cell_move.h
+cell_split_spawn.h
+C:/Users/novin/Documents/Github/LonelyCells/cell_split_spawn.h
+cell_split.h
+C:/Users/novin/Documents/Github/LonelyCells/cell_split.h
 
 C:/Users/novin/Documents/Github/LonelyCells/cell_creat_list.h
 
@@ -37,6 +41,10 @@ C:/Users/novin/Documents/Github/LonelyCells/cell_data_read.h
 C:/Users/novin/Documents/Github/LonelyCells/cell_move.h
 
 C:/Users/novin/Documents/Github/LonelyCells/cell_rand_name.h
+
+C:/Users/novin/Documents/Github/LonelyCells/cell_split.h
+
+C:/Users/novin/Documents/Github/LonelyCells/cell_split_spawn.h
 
 C:/Users/novin/Documents/Github/LonelyCells/map_build.h
 

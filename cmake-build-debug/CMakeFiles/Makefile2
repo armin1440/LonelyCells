@@ -73,12 +73,12 @@ preinstall:
 CMakeFiles/LonelyCells.dir/all:
 	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/depend
 	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\novin\Documents\Github\LonelyCells\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target LonelyCells"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\novin\Documents\Github\LonelyCells\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target LonelyCells"
 .PHONY : CMakeFiles/LonelyCells.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/LonelyCells.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\novin\Documents\Github\LonelyCells\cmake-build-debug\CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\novin\Documents\Github\LonelyCells\cmake-build-debug\CMakeFiles 12
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/LonelyCells.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\novin\Documents\Github\LonelyCells\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/LonelyCells.dir/rule

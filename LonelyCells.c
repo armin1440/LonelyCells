@@ -10,6 +10,8 @@
 #include "cell_rand_name.h"
 #include "cell_creat_list.h"
 #include "cell_move.h"
+#include "cell_split_spawn.h"
+#include "cell_split.h"
 
 enum blocks{
     ENERGY = 1,
@@ -34,7 +36,7 @@ struct map_block{
 
 int main() {
     int option , option2 , map_dim , cell_num , move_num , cell_selected;
-    char *map_data , cell_names[100][8];
+    char *map_data , cell_names[100][8] ,cell_split_name[2][8];
     struct cell* cells = 0 , *tmp = 0 , *cell = 0;
     struct map_block **map;
 
@@ -63,7 +65,7 @@ int main() {
             }
 
             //map_dim = (int)round(sqrt(strlen(map_read())));
-            map_dim = 3;
+            map_dim = 2;
             map_data = map_read();
             cells = cell_creat_list(cell_num , map_dim ,cell_names , map_data);
             map = map_build(map_read() , map_dim , cells);
@@ -89,8 +91,17 @@ int main() {
                         scanf("%d", &move_num);
                         cell_move(cells ,move_num , map , cell_selected );
                         map_print(map , map_dim , cells);
-
-
+                        break;
+                    case 2:
+                        for (int i = 0; i <2 ; ++i) {
+                            printf("Enter the %dth cell's name\n",i+1);
+                            getchar();
+                            scanf("%s",cell_split_name[i]);
+                            cell_split_name[i][7] = '\0';
+                        }
+                        cells = cell_split(&cells , map , cell_split_name ,map_dim ,cell_selected);
+                        cell_num += 1;
+                        map_print(map , map_dim , cells);
                 }
             }
     }

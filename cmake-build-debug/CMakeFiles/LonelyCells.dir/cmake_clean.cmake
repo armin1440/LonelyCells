@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/LonelyCells.dir/cell_data_read.c.obj"
   "CMakeFiles/LonelyCells.dir/cell_move.c.obj"
   "CMakeFiles/LonelyCells.dir/cell_rand_name.c.obj"
+  "CMakeFiles/LonelyCells.dir/cell_split.c.obj"
+  "CMakeFiles/LonelyCells.dir/cell_split_spawn.c.obj"
   "CMakeFiles/LonelyCells.dir/map_build.c.obj"
   "CMakeFiles/LonelyCells.dir/map_print.c.obj"
   "CMakeFiles/LonelyCells.dir/map_read.c.obj"

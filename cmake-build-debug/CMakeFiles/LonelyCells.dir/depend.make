@@ -6,6 +6,8 @@ CMakeFiles/LonelyCells.dir/LonelyCells.c.obj: ../cell_creat_list.h
 CMakeFiles/LonelyCells.dir/LonelyCells.c.obj: ../cell_data_read.h
 CMakeFiles/LonelyCells.dir/LonelyCells.c.obj: ../cell_move.h
 CMakeFiles/LonelyCells.dir/LonelyCells.c.obj: ../cell_rand_name.h
+CMakeFiles/LonelyCells.dir/LonelyCells.c.obj: ../cell_split.h
+CMakeFiles/LonelyCells.dir/LonelyCells.c.obj: ../cell_split_spawn.h
 CMakeFiles/LonelyCells.dir/LonelyCells.c.obj: ../map_build.h
 CMakeFiles/LonelyCells.dir/LonelyCells.c.obj: ../map_print.h
 CMakeFiles/LonelyCells.dir/LonelyCells.c.obj: ../map_read.h
@@ -18,6 +20,11 @@ CMakeFiles/LonelyCells.dir/cell_data_read.c.obj: ../cell_data_read.c
 CMakeFiles/LonelyCells.dir/cell_move.c.obj: ../cell_move.c
 
 CMakeFiles/LonelyCells.dir/cell_rand_name.c.obj: ../cell_rand_name.c
+
+CMakeFiles/LonelyCells.dir/cell_split.c.obj: ../cell_split.c
+CMakeFiles/LonelyCells.dir/cell_split.c.obj: ../cell_split_spawn.h
+
+CMakeFiles/LonelyCells.dir/cell_split_spawn.c.obj: ../cell_split_spawn.c
 
 CMakeFiles/LonelyCells.dir/map_build.c.obj: ../map_build.c
 
