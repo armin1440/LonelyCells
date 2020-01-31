@@ -230,6 +230,33 @@ cell_increase_energy.c.s:
 	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_increase_energy.c.s
 .PHONY : cell_increase_energy.c.s
 
+cell_list_append.obj: cell_list_append.c.obj
+
+.PHONY : cell_list_append.obj
+
+# target to build an object file
+cell_list_append.c.obj:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_list_append.c.obj
+.PHONY : cell_list_append.c.obj
+
+cell_list_append.i: cell_list_append.c.i
+
+.PHONY : cell_list_append.i
+
+# target to preprocess a source file
+cell_list_append.c.i:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_list_append.c.i
+.PHONY : cell_list_append.c.i
+
+cell_list_append.s: cell_list_append.c.s
+
+.PHONY : cell_list_append.s
+
+# target to generate assembly for a file
+cell_list_append.c.s:
+	$(MAKE) -f CMakeFiles\LonelyCells.dir\build.make CMakeFiles/LonelyCells.dir/cell_list_append.c.s
+.PHONY : cell_list_append.c.s
+
 cell_move.obj: cell_move.c.obj
 
 .PHONY : cell_move.obj
@@ -521,6 +548,9 @@ help:
 	@echo ... cell_increase_energy.obj
 	@echo ... cell_increase_energy.i
 	@echo ... cell_increase_energy.s
+	@echo ... cell_list_append.obj
+	@echo ... cell_list_append.i
+	@echo ... cell_list_append.s
 	@echo ... cell_move.obj
 	@echo ... cell_move.i
 	@echo ... cell_move.s

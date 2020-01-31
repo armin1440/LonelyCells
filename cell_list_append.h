@@ -1,0 +1,1 @@
+void cell_list_append( struct map_block **, struct cell * , int , int , char[][8]);

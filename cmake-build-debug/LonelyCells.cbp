@@ -95,6 +95,12 @@
 		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_increase_energy.h">
 			<Option target="LonelyCells"/>
 		</Unit>
+		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_list_append.c">
+			<Option target="LonelyCells"/>
+		</Unit>
+		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_list_append.h">
+			<Option target="LonelyCells"/>
+		</Unit>
 		<Unit filename="C:/Users/novin/Documents/Github/LonelyCells/cell_move.c">
 			<Option target="LonelyCells"/>
 		</Unit>

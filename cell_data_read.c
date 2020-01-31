@@ -6,6 +6,7 @@ struct cell{
     int energy;
     int x;
     int y;
+    int player_num;
     struct cell* next;
 };
 
@@ -27,6 +28,9 @@ struct cell* cell_data_read (void){
         fgetc(cell_file);
         fscanf(cell_file , "%s" , temp->name);
         temp->name[7] = '\0';
+
+        fgetc(cell_file);
+        fscanf(cell_file , "%d" , &temp->player_num);
 
         fgetc(cell_file);
         fscanf(cell_file , "%d" , &temp->x);

@@ -3,11 +3,14 @@
 #include <time.h>
 #include "cell_rand_name.h"
 
+int player;
+
 struct cell{
     char name[8];
     int energy;
     int x;
     int y;
+    int player_num;
     struct cell* next;
 };
 struct map_block{
@@ -51,6 +54,7 @@ struct cell * cell_creat_list(int cell_num , int map_dim , char names[][8] , cha
     list = (struct cell*)malloc(1* sizeof(struct cell));
     strcpy(list->name , names[0] );
     list->energy = 0;
+    list->player_num = player;
     list->x = a[0];
     list->y = b[0];
     list->next = NULL;
@@ -62,6 +66,7 @@ struct cell * cell_creat_list(int cell_num , int map_dim , char names[][8] , cha
         previous->next = temp;
         strcpy(temp->name , names[i] );
         temp->name[7] ='\0';
+        temp->player_num = player;
         temp->energy = 0;
         temp->x = a[i];
         temp->y = b[i];

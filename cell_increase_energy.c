@@ -6,6 +6,7 @@ struct cell{
     int energy;
     int x;
     int y;
+    int player_num;
     struct cell* next;
 };
 struct map_block{

@@ -6,6 +6,7 @@ struct cell{
     int energy;
     int x;
     int y;
+    int player_num;
     struct cell* next;
 };
 
@@ -26,6 +27,7 @@ void cell_save(struct cell* cells ){
     temp = cells;
     while(temp != NULL){
         fprintf(cell_data , "%s\n" , temp->name );
+        fprintf(cell_data , "%d\n" , temp->player_num);
         fprintf(cell_data , "%d\n" , temp->x);
         fprintf(cell_data , "%d\n" , temp->y);
         fprintf(cell_data , "%d\n" , temp->energy);

@@ -9,6 +9,7 @@ struct cell{
     int energy;
     int x;
     int y;
+    int player_num;
     struct cell* next;
 };
 struct map_block{
@@ -31,6 +32,8 @@ struct cell * cell_split(struct cell ** cells , struct map_block **map , char na
         new_cells[1].next = (*cells)->next;
         new_cells[0].x = (*cells)->x;
         new_cells[0].y = (*cells)->y;
+        new_cells[0].player_num = (*cells)->player_num;
+        new_cells[1].player_num = (*cells)->player_num;
         strcpy( new_cells[0].name , names[0] );
         strcpy( new_cells[1].name , names[1] );
 
@@ -45,6 +48,8 @@ struct cell * cell_split(struct cell ** cells , struct map_block **map , char na
         new_cells[1].next = cell->next->next;
         new_cells[0].x = cell->next->x;
         new_cells[0].y = cell->next->y;
+        new_cells[0].player_num = cell->next->player_num;
+        new_cells[1].player_num = cell->next->player_num;
         strcpy( new_cells[0].name , names[0] );
         strcpy( new_cells[1].name , names[1] );
         cell->next = new_cells;
